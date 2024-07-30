@@ -2,6 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* common styles start */
+:root{
+    --color-primary: rgb(224, 44, 109);
+    --color-secondary: rgb(255, 255, 255);
+    --color-dark: rgb(58, 58, 58);
+    --color-blue-dark: rgb(10, 8, 38);
+
+    --base-font-size: 10px;
+    --h-xl-size: 5.2rem;
+    --h-l-size: 3.8rem;
+    --h-m-size: 2.8rem;
+    --h-s-size: 2.4rem;
+    --p-l-size: 1.6rem;
+    --p-m-size: 1.4rem;
+    --p-s-size: 1.2rem;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -9,7 +25,7 @@
 }
 
 html{
-    font-size: 16px;
+    font-size: var(--base-font-size);
 }
 
 body{
@@ -18,4 +34,145 @@ body{
     font-style: normal;
     /* font-family: "Manrope", sans-serif; */
 }
+
+.d-flex{
+    display: flex;
+}
+
+.d-grid{
+    display: grid;
+}
+
+.d-none{
+    display: none;
+}
+
+.container-fluid{
+    max-width: 1440px;
+    margin: 0 auto;
+    background: var(--color-secondary);
+}
 /* common styles end */
+
+/* header styles start */
+.header-container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* navbar styles */
+.navbar{
+    margin: 50px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: var(--h-s-size);
+    color: var(--color-dark);
+    text-align: center;
+}
+
+.logo a{
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+.logo span{
+    color: var(--color-primary)
+}
+
+.nav-item{
+    list-style-type: none;
+    padding: 0 14px;
+}
+
+.nav-link{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    font-size: var(--p-l-size);
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.nav-link::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.nav-item:hover .nav-link::before{
+    width: 100%;
+}
+
+.nav-icon-container{
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icon{
+    font-size: var(--p-l-size);
+}
+
+.nav-icon a{
+    color: var(--color-dark);
+    padding: 0 14px;
+}
+/* banner styles */
+/* header styles end */
+
+
+
+
+/* responsive for medium devices */
+@media screen and (max-width: 992px){
+    /* common styles start */
+    :root{
+        --h-xl-size: 3.8rem;
+        --h-l-size: 2.8rem;
+        --h-m-size: 2.4rem;
+        --h-s-size: 1.6rem;
+        --p-l-size: 1.4rem;
+    }
+    /* common styles end */
+
+    /* header styles start */
+    /* navbar styles */
+    .nav-item,
+    .nav-icon a{
+        padding: 0 7px;
+    }
+    /* banner styles */
+    /* header styles end */
+}
+
+/* responsive for small devices */
+@media screen and (max-width: 576px){
+    /* common styles start */
+    :root{
+        --h-xl-size: 2.8rem;
+        --h-l-size: 2.4rem;
+        --h-m-size: 1.6rem;
+        --h-s-size: 1.6rem;
+        --p-l-size: 1.4rem;
+    }
+    /* common styles end */
+
+    /* navbar styles */
+    .hamburger{
+        display: block;
+        margin-right: 7px;
+        font-size: var(--h-m-size);
+    }
+    .nav, .search-icon{
+        display: none;
+    }
+    /* banner styles */
+    /* header styles end */
+}
