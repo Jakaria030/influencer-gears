@@ -48,6 +48,17 @@ body{
     display: none;
 }
 
+.btn{
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    font-size: var(--p-l-size);
+    padding: 10px 24px;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
 .container-fluid{
     max-width: 1440px;
     margin: 0 auto;
@@ -152,14 +163,6 @@ body{
 }
 
 .btn-primary{
-    background: var(--color-primary);
-    color: var(--color-secondary);
-    font-size: var(--p-l-size);
-    padding: 10px 24px;
-    outline: none;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
     position: relative;
 }
 
@@ -241,7 +244,7 @@ body{
 }
 
 .gallery-col{
-    max-width: 300px;
+    max-width: 350px;
     border-radius: 5px;
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
     padding: 20px;
@@ -289,6 +292,58 @@ body{
     font-size: var(--p-m-size);
     font-weight: 700;
 }
+
+.seee-more-btn-container{
+    width: 100%;
+    text-align: right;
+}
+
+.see-more-btn{
+    background: transparent;
+    color: var(--color-primary);
+    font-size: var(--p-l-size);
+    font-weight: 700;
+    padding: 0;
+}
+/* feature products styles */
+.feature-container{
+    padding: 100px 0;
+}
+
+.feature-row{
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+}
+
+.feature-col-img{
+    width: 40%;
+}
+
+.feature-col-img img{
+    width: 100%;
+}
+
+.feature-col-content{
+    width: 60%;
+}
+
+.feature-col-content h2{
+    color: var(--color-blue-dark);
+    font-size: var(--h-l-size);
+    font-weight: 700;
+}
+
+.feature-col-content p{
+    color: rgb(108, 108, 108);
+    font-size: var(--p-l-size);
+    font-weight: 700;
+    margin: 16px 0;
+}
+
+.btn-secondary{
+    border-radius: 0;
+}
 /* main styles end */
 
 
@@ -330,6 +385,27 @@ body{
     .gallery-row{
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
+    }
+    /* feature products styles */
+    .feature-container{
+        padding: 50px 0;
+    }
+
+    .feature-row{
+        flex-direction: column-reverse;
+        gap: 0%;
+    }
+
+    .feature-col-img{
+        width: 80%;
+        height: auto;
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .feature-col-content{
+        width: 100%;
+        text-align: center;
     }
     /* main stayles end */
 }
@@ -402,6 +478,11 @@ body{
 
     .gallery-col{
         margin: 0 auto;
+    }
+    /* feature products styles */
+    .feature-col-img{
+        width: 100%;
+        height: auto;
     }
     /* main stayles end */
 }
