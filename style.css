@@ -33,7 +33,6 @@ body{
     font-weight: 400;
     font-style: normal;
     background-color: black;
-    /* font-family: "Manrope", sans-serif; */
 }
 
 .d-flex{
@@ -346,6 +345,43 @@ body{
 }
 /* main styles end */
 
+/* footer styles start */
+.footer-container{
+    background: var(--color-blue-dark);
+    text-align: center;
+    padding: 50px 0;
+}
+
+.footer-container h2{
+    color: var(--color-secondary);
+    font-size: var(--h-s-size);
+    font-weight: 700;
+}
+
+.footer-container p{
+    color: var(--color-secondary);
+    font-size: var(--p-m-size);
+    font-family: "Manrope", sans-serif;
+    line-height: 2.5;
+}
+
+.footer-container small{
+    color: var(--color-secondary);
+    font-size: var(--p-m-size);
+    font-family: "Manrope", sans-serif;
+}
+
+
+.social-icons{
+    margin-top: 20px;
+}
+
+.social-icons i{
+    color: var(--color-secondary);
+    font-size: var(--p-l-size);
+    padding: 10px 15px;
+}
+/* footer styles end */
 
 
 /* responsive for medium devices */
