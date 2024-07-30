@@ -124,7 +124,75 @@ body{
     color: var(--color-dark);
     padding: 0 14px;
 }
+.nav-icon a:last-child{
+    padding-right: 0;
+}
 /* banner styles */
+.banner-container{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-content{
+    max-width: 580px;
+}
+
+.banner-title{
+    font-size: var(--h-xl-size);
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.banner-description{
+    font-size: var(--p-l-size);
+    font-weight: 600;
+    color: var(--color-dark);
+    margin: 16px 0;
+}
+
+.btn-primary{
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    font-size: var(--p-l-size);
+    padding: 10px 24px;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn-primary::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.1);
+    transition: 0.5s ease;
+}
+
+.btn-container:hover .btn-primary::before{
+    width: 100%;
+}
+
+.banner-image{
+    max-width: 475px;
+    position: relative;
+}
+
+.back-circle-img{
+    width: 100%;
+}
+
+.front-main-img{
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 /* header styles end */
 
 
@@ -163,16 +231,38 @@ body{
         --p-l-size: 1.4rem;
     }
     /* common styles end */
-
+    
+    /* header styles start */
+    .header-container{
+        width: 90%;
+    }
     /* navbar styles */
     .hamburger{
         display: block;
         margin-right: 7px;
         font-size: var(--h-m-size);
     }
+
     .nav, .search-icon{
         display: none;
     }
     /* banner styles */
+    .banner-container{
+        flex-direction: column-reverse;
+    }
+
+    .banner-image{
+        margin: 0 5%;
+        margin-bottom: 5%;
+    }
+
+    .banner-title,
+    .banner-description{
+        text-align: center;
+    }
+
+    .btn-container{
+        text-align: center;
+    }        
     /* header styles end */
 }
